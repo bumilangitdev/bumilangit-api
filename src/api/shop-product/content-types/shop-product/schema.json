@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_products",
+  "info": {
+    "singularName": "shop-product",
+    "pluralName": "shop-products",
+    "displayName": "ShopProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "COMIC",
+        "APPARELS",
+        "ACCESSORIES",
+        "TOYS",
+        "COLLECTIBLES"
+      ],
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "weight": {
+      "type": "biginteger"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "isHotItems": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isTokopediaAvailable": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isShopeeAvailable": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "shopCategory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::shop-category.shop-category",
+      "inversedBy": "products"
+    },
+    "relatedProducts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shop-product.shop-product"
+    }
+  }
+}

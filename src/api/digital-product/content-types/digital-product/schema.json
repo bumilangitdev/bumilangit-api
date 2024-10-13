@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "digital_products",
+  "info": {
+    "singularName": "digital-product",
+    "pluralName": "digital-products",
+    "displayName": "DigitalProduct"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "publisher": {
+      "type": "string",
+      "required": true
+    },
+    "releaseStatus": {
+      "type": "enumeration",
+      "enum": [
+        "UPCOMING",
+        "RELEASED"
+      ],
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "posterImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "detailImage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "isPlayStoreAvailable": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isAppStoreAvailable": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "digitalLine": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::digital-line.digital-line",
+      "inversedBy": "digitalProducts"
+    }
+  }
+}

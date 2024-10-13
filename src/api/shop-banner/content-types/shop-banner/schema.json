@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_banners",
+  "info": {
+    "singularName": "shop-banner",
+    "pluralName": "shop-banners",
+    "displayName": "ShopBanner"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

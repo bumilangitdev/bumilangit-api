@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "character_abilities",
+  "info": {
+    "singularName": "character-ability",
+    "pluralName": "character-abilities",
+    "displayName": "CharacterAbility"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "character": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::character.character",
+      "inversedBy": "abilities"
+    }
+  }
+}

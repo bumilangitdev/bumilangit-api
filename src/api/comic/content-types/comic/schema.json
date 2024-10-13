@@ -1,0 +1,112 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comics",
+  "info": {
+    "singularName": "comic",
+    "pluralName": "comics",
+    "displayName": "Comic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "series": {
+      "type": "string",
+      "required": true
+    },
+    "story": {
+      "type": "string",
+      "required": true
+    },
+    "illustrator": {
+      "type": "string",
+      "required": true
+    },
+    "coloring": {
+      "type": "string",
+      "required": true
+    },
+    "ISBN": {
+      "type": "string",
+      "required": true
+    },
+    "publishDate": {
+      "type": "date",
+      "required": true
+    },
+    "buyLink": {
+      "type": "string",
+      "required": true
+    },
+    "isTokopediaAvailable": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isShopeeAvailable": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isLimited": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "creators": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artist.artist",
+      "inversedBy": "comics"
+    },
+    "characters": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::character.character",
+      "inversedBy": "comics"
+    },
+    "relatedMovies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie.movie",
+      "inversedBy": "relatedComics"
+    },
+    "relatedComics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comic.comic"
+    }
+  }
+}
