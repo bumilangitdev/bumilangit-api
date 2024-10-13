@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "join_nows",
+  "collectionName": "join_now_buttons",
   "info": {
-    "singularName": "join-now",
-    "pluralName": "join-nows",
-    "displayName": "JoinNow"
+    "singularName": "join-now-button",
+    "pluralName": "join-now-buttons",
+    "displayName": "JoinNowButton"
   },
   "options": {
     "draftAndPublish": false
@@ -15,6 +15,15 @@
     }
   },
   "attributes": {
+    "btnText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
     "link": {
       "pluginOptions": {
         "i18n": {
@@ -23,16 +32,6 @@
       },
       "type": "string",
       "required": true
-    },
-    "btnText": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true,
-      "default": "btnText"
     }
   }
 }
