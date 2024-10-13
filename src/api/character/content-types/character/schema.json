@@ -1,0 +1,151 @@
+{
+  "kind": "collectionType",
+  "collectionName": "characters",
+  "info": {
+    "singularName": "character",
+    "pluralName": "characters",
+    "displayName": "Character",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "realName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "longDescription": {
+      "type": "text",
+      "required": true
+    },
+    "quotes": {
+      "type": "string"
+    },
+    "height": {
+      "type": "integer",
+      "required": true
+    },
+    "weight": {
+      "required": true,
+      "type": "integer"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "symbol": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mainPoseImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "alternativePoseImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "portraitImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isSpotlight": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isTopComic": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "abilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character-ability.character-ability",
+      "mappedBy": "character"
+    },
+    "artists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::artist.artist",
+      "inversedBy": "characters"
+    },
+    "allies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character.character"
+    },
+    "enemies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character.character"
+    },
+    "characterGroups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::character-group.character-group",
+      "mappedBy": "characters"
+    },
+    "movies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::movie.movie",
+      "mappedBy": "characters"
+    },
+    "comics": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::comic.comic",
+      "mappedBy": "characters"
+    }
+  }
+}

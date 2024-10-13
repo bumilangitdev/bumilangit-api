@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brand_projects",
+  "info": {
+    "singularName": "brand-project",
+    "pluralName": "brand-projects",
+    "displayName": "BrandProject"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "banner": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "poster": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "projects"
+    }
+  }
+}

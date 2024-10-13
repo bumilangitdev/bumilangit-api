@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "character_groups",
+  "info": {
+    "singularName": "character-group",
+    "pluralName": "character-groups",
+    "displayName": "CharacterGroup"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "characters": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::character.character",
+      "inversedBy": "characterGroups"
+    }
+  }
+}

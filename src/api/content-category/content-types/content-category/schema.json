@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_categories",
+  "info": {
+    "singularName": "content-category",
+    "pluralName": "content-categories",
+    "displayName": "ContentCategory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footer_brandings",
+  "info": {
+    "singularName": "footer-branding",
+    "pluralName": "footer-brandings",
+    "displayName": "FooterBranding"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
