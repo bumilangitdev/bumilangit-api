@@ -1209,12 +1209,12 @@ export interface ApiFooterBrandingFooterBranding
   };
 }
 
-export interface ApiJoinNowJoinNow extends Struct.SingleTypeSchema {
-  collectionName: 'join_nows';
+export interface ApiJoinNowButtonJoinNowButton extends Struct.SingleTypeSchema {
+  collectionName: 'join_now_buttons';
   info: {
-    singularName: 'join-now';
-    pluralName: 'join-nows';
-    displayName: 'JoinNow';
+    singularName: 'join-now-button';
+    pluralName: 'join-now-buttons';
+    displayName: 'JoinNowButton';
   };
   options: {
     draftAndPublish: false;
@@ -1225,6 +1225,13 @@ export interface ApiJoinNowJoinNow extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    btnText: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     link: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -1232,14 +1239,6 @@ export interface ApiJoinNowJoinNow extends Struct.SingleTypeSchema {
           localized: false;
         };
       }>;
-    btnText: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }> &
-      Schema.Attribute.DefaultTo<'btnText'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1250,7 +1249,7 @@ export interface ApiJoinNowJoinNow extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::join-now.join-now'
+      'api::join-now-button.join-now-button'
     >;
   };
 }
@@ -2617,7 +2616,7 @@ declare module '@strapi/strapi' {
       'api::digital-line.digital-line': ApiDigitalLineDigitalLine;
       'api::digital-product.digital-product': ApiDigitalProductDigitalProduct;
       'api::footer-branding.footer-branding': ApiFooterBrandingFooterBranding;
-      'api::join-now.join-now': ApiJoinNowJoinNow;
+      'api::join-now-button.join-now-button': ApiJoinNowButtonJoinNowButton;
       'api::management-team.management-team': ApiManagementTeamManagementTeam;
       'api::movie.movie': ApiMovieMovie;
       'api::movie-line.movie-line': ApiMovieLineMovieLine;
