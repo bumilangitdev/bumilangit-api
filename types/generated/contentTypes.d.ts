@@ -1671,8 +1671,7 @@ export interface ApiPodcastPodcast extends Struct.CollectionTypeSchema {
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    thumbnail: Schema.Attribute.Media<'images', true> &
-      Schema.Attribute.Required;
+    thumbnail: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     spotifyLink: Schema.Attribute.String;
     youtubeLink: Schema.Attribute.String;
     noiceLink: Schema.Attribute.String;
