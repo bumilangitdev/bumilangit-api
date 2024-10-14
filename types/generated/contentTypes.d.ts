@@ -619,12 +619,12 @@ export interface ApiArtistArtist extends Struct.CollectionTypeSchema {
     instagram: Schema.Attribute.String;
     facebook: Schema.Attribute.String;
     twitter: Schema.Attribute.String;
+    movies: Schema.Attribute.Relation<'manyToMany', 'api::movie.movie'>;
+    comics: Schema.Attribute.Relation<'manyToMany', 'api::comic.comic'>;
     characters: Schema.Attribute.Relation<
       'manyToMany',
       'api::character.character'
     >;
-    movies: Schema.Attribute.Relation<'manyToMany', 'api::movie.movie'>;
-    comics: Schema.Attribute.Relation<'manyToMany', 'api::comic.comic'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -770,7 +770,7 @@ export interface ApiCharacterCharacter extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::character-ability.character-ability'
     >;
-    artists: Schema.Attribute.Relation<'manyToMany', 'api::artist.artist'>;
+    creators: Schema.Attribute.Relation<'manyToMany', 'api::artist.artist'>;
     allies: Schema.Attribute.Relation<'oneToMany', 'api::character.character'>;
     enemies: Schema.Attribute.Relation<'oneToMany', 'api::character.character'>;
     characterGroups: Schema.Attribute.Relation<

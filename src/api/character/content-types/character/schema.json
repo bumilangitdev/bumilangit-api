@@ -113,7 +113,7 @@
       "target": "api::character-ability.character-ability",
       "mappedBy": "character"
     },
-    "artists": {
+    "creators": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::artist.artist",

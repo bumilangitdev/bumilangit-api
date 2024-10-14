@@ -63,12 +63,6 @@
       "pluginOptions": {},
       "type": "string"
     },
-    "characters": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::character.character",
-      "mappedBy": "artists"
-    },
     "movies": {
       "type": "relation",
       "relation": "manyToMany",
@@ -79,6 +73,12 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::comic.comic",
+      "mappedBy": "creators"
+    },
+    "characters": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::character.character",
       "mappedBy": "creators"
     }
   }
