@@ -16,12 +16,6 @@
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "products": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::shop-product.shop-product",
-      "mappedBy": "shopCategory"
     }
   }
 }

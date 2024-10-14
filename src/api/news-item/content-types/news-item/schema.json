@@ -31,7 +31,7 @@
           "localized": true
         }
       },
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "category": {
@@ -58,17 +58,17 @@
       "required": true
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     },
     "content": {
       "pluginOptions": {

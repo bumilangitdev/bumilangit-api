@@ -1079,12 +1079,13 @@ export interface ApiDigitalProductDigitalProduct
     singularName: 'digital-product';
     pluralName: 'digital-products';
     displayName: 'DigitalProduct';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    name: Schema.Attribute.Text &
+    name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -1522,7 +1523,7 @@ export interface ApiNewsItemNewsItem extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    description: Schema.Attribute.String &
+    description: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1669,7 +1670,7 @@ export interface ApiPodcastPodcast extends Struct.CollectionTypeSchema {
   };
   attributes: {
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    description: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     thumbnail: Schema.Attribute.Media<'images', true> &
       Schema.Attribute.Required;
     spotifyLink: Schema.Attribute.String;
@@ -1927,10 +1928,6 @@ export interface ApiShopCategoryShopCategory
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
-    products: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::shop-product.shop-product'
-    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1966,7 +1963,7 @@ export interface ApiShopProductShopProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     price: Schema.Attribute.BigInteger & Schema.Attribute.Required;
-    weight: Schema.Attribute.BigInteger;
+    weight: Schema.Attribute.BigInteger & Schema.Attribute.Required;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     link: Schema.Attribute.String & Schema.Attribute.Required;
     isHotItems: Schema.Attribute.Boolean &
@@ -1978,10 +1975,6 @@ export interface ApiShopProductShopProduct extends Struct.CollectionTypeSchema {
     isShopeeAvailable: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
-    shopCategory: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::shop-category.shop-category'
-    >;
     relatedProducts: Schema.Attribute.Relation<
       'oneToMany',
       'api::shop-product.shop-product'

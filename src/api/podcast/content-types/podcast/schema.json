@@ -19,7 +19,7 @@
     },
     "description": {
       "pluginOptions": {},
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "thumbnail": {
