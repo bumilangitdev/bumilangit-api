@@ -1284,6 +1284,7 @@ export interface ApiMovieMovie extends Struct.CollectionTypeSchema {
     singularName: 'movie';
     pluralName: 'movies';
     displayName: 'Movie';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1353,13 +1354,6 @@ export interface ApiMovieMovie extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::movie-line.movie-line'
     >;
-    slug: Schema.Attribute.UID<'title'> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     artImage: Schema.Attribute.Media<'images'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
@@ -1419,6 +1413,13 @@ export interface ApiMovieMovie extends Struct.CollectionTypeSchema {
       'api::character.character'
     >;
     relatedComics: Schema.Attribute.Relation<'manyToMany', 'api::comic.comic'>;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1661,55 +1662,19 @@ export interface ApiPodcastPodcast extends Struct.CollectionTypeSchema {
     singularName: 'podcast';
     pluralName: 'podcasts';
     displayName: 'Podcast';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
   attributes: {
-    title: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    description: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
     thumbnail: Schema.Attribute.Media<'images', true> &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
-    spotifyLink: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
-    youtubeLink: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
-    noiceLink: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
+      Schema.Attribute.Required;
+    spotifyLink: Schema.Attribute.String;
+    youtubeLink: Schema.Attribute.String;
+    noiceLink: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

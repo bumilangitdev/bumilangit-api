@@ -4,71 +4,44 @@
   "info": {
     "singularName": "podcast",
     "pluralName": "podcasts",
-    "displayName": "Podcast"
+    "displayName": "Podcast",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "title": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+      "pluginOptions": {},
       "type": "string",
       "required": true
     },
     "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+      "pluginOptions": {},
       "type": "string",
       "required": true
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "required": true
+      "pluginOptions": {}
     },
     "spotifyLink": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
+      "pluginOptions": {},
       "type": "string",
       "required": false
     },
     "youtubeLink": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
+      "pluginOptions": {},
       "type": "string"
     },
     "noiceLink": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
+      "pluginOptions": {},
       "type": "string"
     }
   }
