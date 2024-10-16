@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "follow_links",
+  "info": {
+    "singularName": "follow-link",
+    "pluralName": "follow-links",
+    "displayName": "FollowLink",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "instagram": {
+      "type": "string"
+    },
+    "tiktok": {
+      "type": "string"
+    },
+    "x": {
+      "type": "string"
+    },
+    "linkedIn": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    },
+    "spotify": {
+      "type": "string"
+    },
+    "contactUs": {
+      "type": "string",
+      "required": true
+    },
+    "career": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

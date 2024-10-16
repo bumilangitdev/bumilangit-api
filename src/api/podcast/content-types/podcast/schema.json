@@ -43,6 +43,10 @@
     "noiceLink": {
       "pluginOptions": {},
       "type": "string"
+    },
+    "date": {
+      "type": "date",
+      "required": true
     }
   }
 }
