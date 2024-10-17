@@ -1121,6 +1121,41 @@ export interface ApiDigitalProductDigitalProduct
   };
 }
 
+export interface ApiFollowLinkFollowLink extends Struct.SingleTypeSchema {
+  collectionName: 'follow_links';
+  info: {
+    singularName: 'follow-link';
+    pluralName: 'follow-links';
+    displayName: 'FollowLink';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    instagram: Schema.Attribute.String;
+    tiktok: Schema.Attribute.String;
+    x: Schema.Attribute.String;
+    linkedIn: Schema.Attribute.String;
+    youtube: Schema.Attribute.String;
+    spotify: Schema.Attribute.String;
+    contactUs: Schema.Attribute.String & Schema.Attribute.Required;
+    career: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::follow-link.follow-link'
+    >;
+  };
+}
+
 export interface ApiFooterBrandingFooterBranding
   extends Struct.CollectionTypeSchema {
   collectionName: 'footer_brandings';
@@ -1675,6 +1710,7 @@ export interface ApiPodcastPodcast extends Struct.CollectionTypeSchema {
     spotifyLink: Schema.Attribute.String;
     youtubeLink: Schema.Attribute.String;
     noiceLink: Schema.Attribute.String;
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -2512,6 +2548,7 @@ declare module '@strapi/strapi' {
       'api::content-category.content-category': ApiContentCategoryContentCategory;
       'api::digital-line.digital-line': ApiDigitalLineDigitalLine;
       'api::digital-product.digital-product': ApiDigitalProductDigitalProduct;
+      'api::follow-link.follow-link': ApiFollowLinkFollowLink;
       'api::footer-branding.footer-branding': ApiFooterBrandingFooterBranding;
       'api::join-now-button.join-now-button': ApiJoinNowButtonJoinNowButton;
       'api::management-team.management-team': ApiManagementTeamManagementTeam;
