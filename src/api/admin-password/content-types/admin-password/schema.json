@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "admin_passwords",
+  "info": {
+    "singularName": "admin-password",
+    "pluralName": "admin-passwords",
+    "displayName": "AdminPassword",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "password": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
