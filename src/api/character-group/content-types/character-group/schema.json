@@ -4,17 +4,27 @@
   "info": {
     "singularName": "character-group",
     "pluralName": "character-groups",
-    "displayName": "CharacterGroup"
+    "displayName": "CharacterGroup",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "characters": {
       "type": "relation",
