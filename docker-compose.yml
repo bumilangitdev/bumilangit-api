@@ -1,8 +1,9 @@
-version: "3"
 services:
   bumilangit-api:
     container_name: bumilangit-api
-    build: .
+    build:
+      context: .
+      dockerfile: ./docker/${NODE_ENV}/Dockerfile
     image: bumilangit-api:latest
     restart: unless-stopped
     env_file: .env

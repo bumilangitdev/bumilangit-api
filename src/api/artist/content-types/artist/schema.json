@@ -10,30 +10,54 @@
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "name": {
-      "pluginOptions": {},
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "string",
       "required": true
     },
     "description": {
-      "pluginOptions": {},
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "text",
       "required": true
     },
     "dob": {
-      "pluginOptions": {},
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "date",
       "required": true
     },
     "director": {
-      "pluginOptions": {},
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "string",
       "required": false
     },
     "productionHouse": {
-      "pluginOptions": {},
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "string"
     },
     "picture": {
@@ -43,24 +67,34 @@
       "allowedTypes": [
         "images"
       ],
-      "pluginOptions": {}
-    },
-    "slug": {
-      "pluginOptions": {},
-      "type": "uid",
-      "targetField": "name",
-      "required": true
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     },
     "instagram": {
-      "pluginOptions": {},
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "string"
     },
     "facebook": {
-      "pluginOptions": {},
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "string"
     },
     "twitter": {
-      "pluginOptions": {},
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "string"
     },
     "movies": {
@@ -80,6 +114,16 @@
       "relation": "manyToMany",
       "target": "api::character.character",
       "mappedBy": "creators"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true,
+      "regex": "^[a-z0-9-]+$"
     }
   }
 }
