@@ -4,39 +4,69 @@
   "info": {
     "singularName": "brand-project",
     "pluralName": "brand-projects",
-    "displayName": "BrandProject"
+    "displayName": "BrandProject",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     },
     "poster": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     },
     "brand": {
       "type": "relation",

@@ -191,6 +191,15 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::comic.comic"
+    },
+    "coverArt": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "required": true
     }
   }
 }
