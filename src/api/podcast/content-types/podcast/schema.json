@@ -73,7 +73,7 @@
       "type": "string"
     },
     "date": {
-      "type": "date",
+      "type": "datetime",
       "required": true,
       "pluginOptions": {
         "i18n": {

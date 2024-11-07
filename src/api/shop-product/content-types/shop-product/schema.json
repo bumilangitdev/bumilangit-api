@@ -23,7 +23,7 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "COMIC",
+        "COMICS",
         "APPARELS",
         "ACCESSORIES",
         "TOYS",

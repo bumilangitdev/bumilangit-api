@@ -44,7 +44,7 @@
       }
     },
     "date": {
-      "type": "date",
+      "type": "datetime",
       "required": true,
       "pluginOptions": {
         "i18n": {
@@ -68,7 +68,7 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "COMIC",
+        "COMICS",
         "MOVIES & SERIES",
         "MEDIA RELEASE"
       ],

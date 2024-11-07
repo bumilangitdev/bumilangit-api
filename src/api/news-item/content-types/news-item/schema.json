@@ -42,7 +42,7 @@
       },
       "type": "enumeration",
       "enum": [
-        "COMIC",
+        "COMICS",
         "MOVIES & SERIES",
         "MEDIA RELEASE"
       ],
@@ -54,7 +54,7 @@
           "localized": false
         }
       },
-      "type": "date",
+      "type": "datetime",
       "required": true
     },
     "thumbnail": {
