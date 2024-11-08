@@ -43,23 +43,6 @@
       "type": "date",
       "required": true
     },
-    "director": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string",
-      "required": false
-    },
-    "productionHouse": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "string"
-    },
     "picture": {
       "type": "media",
       "multiple": false,
@@ -124,6 +107,14 @@
       "type": "string",
       "required": true,
       "regex": "^[a-z0-9-]+$"
+    },
+    "works": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
     }
   }
 }
