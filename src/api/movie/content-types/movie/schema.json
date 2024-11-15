@@ -211,7 +211,8 @@
         }
       },
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "isDisneyPlusAvailable": {
       "pluginOptions": {
@@ -221,7 +222,7 @@
       },
       "type": "boolean",
       "default": false,
-      "required": false
+      "required": true
     },
     "isAmazonPrimeAvailable": {
       "pluginOptions": {
@@ -230,7 +231,8 @@
         }
       },
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "isHBOMaxAvailable": {
       "pluginOptions": {
@@ -239,7 +241,8 @@
         }
       },
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "isTencentVideoAvailable": {
       "pluginOptions": {
@@ -248,7 +251,8 @@
         }
       },
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "isVidioAvailable": {
       "pluginOptions": {
@@ -257,7 +261,8 @@
         }
       },
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "isiQIYIAvailable": {
       "pluginOptions": {
@@ -266,7 +271,8 @@
         }
       },
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     },
     "isMaxStreamAvailable": {
       "pluginOptions": {
@@ -275,7 +281,8 @@
         }
       },
       "type": "boolean",
-      "default": false
+      "default": false,
+      "required": true
     }
   }
 }
