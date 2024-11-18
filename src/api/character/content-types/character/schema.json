@@ -62,7 +62,7 @@
     },
     "height": {
       "type": "integer",
-      "required": true,
+      "required": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -70,7 +70,7 @@
       }
     },
     "weight": {
-      "required": true,
+      "required": false,
       "type": "integer",
       "pluginOptions": {
         "i18n": {
