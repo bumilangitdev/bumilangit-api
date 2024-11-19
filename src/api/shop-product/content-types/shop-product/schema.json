@@ -45,7 +45,7 @@
     },
     "weight": {
       "type": "biginteger",
-      "required": true
+      "required": false
     },
     "slug": {
       "type": "uid",
