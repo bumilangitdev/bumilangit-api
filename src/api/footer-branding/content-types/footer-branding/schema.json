@@ -4,7 +4,8 @@
   "info": {
     "singularName": "footer-branding",
     "pluralName": "footer-brandings",
-    "displayName": "FooterBranding"
+    "displayName": "FooterBranding",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,12 +17,15 @@
       "required": true
     },
     "logo": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

@@ -108,7 +108,7 @@
     "isPlayStoreAvailable": {
       "type": "boolean",
       "default": false,
-      "required": true,
+      "required": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -118,7 +118,7 @@
     "isAppStoreAvailable": {
       "type": "boolean",
       "default": false,
-      "required": true,
+      "required": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
