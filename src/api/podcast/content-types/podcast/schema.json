@@ -80,6 +80,14 @@
           "localized": false
         }
       }
+    },
+    "applePodcastLink": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
     }
   }
 }

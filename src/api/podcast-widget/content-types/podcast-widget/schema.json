@@ -4,7 +4,8 @@
   "info": {
     "singularName": "podcast-widget",
     "pluralName": "podcast-widgets",
-    "displayName": "PodcastWidget"
+    "displayName": "PodcastWidget",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -34,17 +35,17 @@
       "required": true
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     },
     "spotifyLink": {
       "pluginOptions": {
@@ -63,6 +64,14 @@
       "type": "string"
     },
     "noiceLink": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
+    },
+    "applePodcastLink": {
       "pluginOptions": {
         "i18n": {
           "localized": false
