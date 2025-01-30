@@ -11,7 +11,7 @@ ENV PATH /opt/node_modules/.bin:$PATH
 WORKDIR /opt/app
 COPY . .
 RUN ["npm", "run", "strapi", "ts:generate-types"]
-RUN npm run build
+RUN ["npm", "run", "build", "--", "--minify"]
 
 # Creating final production image
 FROM node:20-alpine AS runner
