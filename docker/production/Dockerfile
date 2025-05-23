@@ -1,5 +1,5 @@
 # Creating multi-stage build for production
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev vips-dev
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
@@ -14,7 +14,7 @@ RUN ["npm", "run", "strapi", "ts:generate-types"]
 RUN ["npm", "run", "build", "--", "--minify"]
 
 # Creating final production image
-FROM node:20-alpine AS runner
+FROM node:22-alpine AS runner
 RUN apk add --no-cache vips-dev
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
